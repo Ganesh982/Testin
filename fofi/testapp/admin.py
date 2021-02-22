@@ -4,3 +4,7 @@ from testapp.models import Student
 class StudentAdmin(admin.ModelAdmin):
     list_display=['name','marks','hero','heroin']
 admin.site.register(Student,StudentAdmin)
+
+
+# teasingadfdijfijalf
+
