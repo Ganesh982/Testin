@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    {% load static %}
+    <html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static '/css/demo.css'%}">
+</head>
+<body>
+<h1> The employees list is : </h1>
+    {% if movie_list %}
+    <table>
+    <thead>
+    <th> eno </th>
+    <th> ename </th>
+    <th> esal </th>
+    <th> eaddr </th>
+    </thead>
+    {% for emp in movie_list %}
+    <tr>
+    <td> {{emp.name}}</td>
+    <td>{{emp.marks}}</td>
+    <td>{{emp.hero}}</td>
+    <td> {{emp.heroin}}</td>
+    </tr>
+{% endfor %}
+    </table>
+    {%else%}
+    <p> No records found </p>
+{% endif %}
+</body>
+</html>
